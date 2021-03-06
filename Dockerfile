@@ -1,18 +1,17 @@
-FROM mhart/alpine-node:12
+FROM mhart/alpine-node:14 AS build
 
 ENV NODE_PATH=/node_modules
 ENV PATH=$PATH:/node_modules/.bin
 
-RUN apk update && apk add bash && rm -rf /var/cache/apk/*
+RUN apk --no-cache update
 
 WORKDIR /app
 ADD . /app
 
-# Set variables needed for building
-ENV NODE_ENV=production
-ENV GA_ID=UA-68649021-1
-
-RUN yarn
+RUN npm install
 RUN npm run build
 
-EXPOSE 7999
+FROM nginx:stable-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]
