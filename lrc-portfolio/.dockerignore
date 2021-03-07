@@ -1,0 +1,9 @@
+*.md
+.git
+.cache
+
+package-lock.json
+
+node_modules/
+charts/
+terraform/
