@@ -186,12 +186,12 @@ resource "tls_private_key" "flux_deploy_key" {
 }
 
 # Creates public key in github
-resource "github_repository_deploy_key" "lrc_portfolio_repo" {
-  title      = "Flux Key"
-  repository = "lrc-portfolio"
-  key        = tls_private_key.flux_deploy_key.public_key_openssh
-  read_only  = "false"
-}
+# resource "github_repository_deploy_key" "lrc_portfolio_repo" {
+#   title      = "Flux Key"
+#   repository = "lrc-portfolio"
+#   key        = tls_private_key.flux_deploy_key.public_key_openssh
+#   read_only  = "false"
+# }
 
 resource "time_sleep" "sleep_for_cluster_fix_helm_6361" {
   create_duration  = "300s"

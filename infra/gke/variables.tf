@@ -23,7 +23,7 @@ variable "gke_version" {
 
 variable "gke_machine_type" {
   description = "Machine type used for the node-pool"
-  default     = "n2-standard-2"
+  default     = "n1-standard-4"
 }
 
 variable "gitlab_nodes_subnet_cidr" {
