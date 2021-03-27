@@ -47,3 +47,8 @@ build/
 
 # Nohup
 nohup.out
+
+# Infra
+/infra/gke/.terraform*
+/infra/gke/terraform.tfstate
+/infra/gke/values/*
