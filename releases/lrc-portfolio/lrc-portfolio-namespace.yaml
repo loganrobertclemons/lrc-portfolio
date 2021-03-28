@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: lrc-portfolio
+  labels:
+    name: lrc-portfolio
+    istio-injection: enabled
