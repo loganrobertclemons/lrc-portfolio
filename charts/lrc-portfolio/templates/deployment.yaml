@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Values.namespace }}
   labels:
     app: lrc-portfolio
+    sidecar.istio.io/inject: "true"
 spec:
   replicas: {{ .Values.spec.replicas }}
   selector:
