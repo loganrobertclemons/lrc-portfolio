@@ -1,0 +1,26 @@
+nameOverride: lrc-portfolio
+namespace: lrc-portfolio
+serviceAccount:
+  name: lrc-portfolio-reader
+
+# Deployment settings
+spec:
+  replicas: 1
+  restartPolicy: Always
+  containerPort: 3000
+  image:
+    repository: lclemons
+    tag: lrc-portfolio:1.0.1
+
+# Service settings
+service:
+  portName: http
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+
+# Istio/Ingress settings
+# ingress:
+#   dnsTarget: abe1d83748bb711ea83140a145ad539b-1921665207.us-east-1.elb.amazonaws.com
+#   dnsHostname: lrc-portfolio.k8s.prod.liriotech.com
+#   tlsCredName: wildcard-prod-liriotech-com

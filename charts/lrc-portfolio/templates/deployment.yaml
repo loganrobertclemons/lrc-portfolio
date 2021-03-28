@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "lrc-portfolio.name" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: lrc-portfolio
+spec:
+  replicas: {{ .Values.spec.replicas }}
+  selector:
+    matchLabels:
+      app: lrc-portfolio
+  template:
+    metadata:
+      labels:
+        app: lrc-portfolio
+    spec:
+      serviceAccountName: {{ template "lrc-portfolio.serviceAccountName" . }}
+      restartPolicy: {{ .Values.spec.restartPolicy }}
+      containers:
+      - name: {{ template "lrc-portfolio.name" . }}
+        image: {{ .Values.spec.image.repository }}/{{ .Values.spec.image.tag }}
+        ports:
+        - containerPort: {{ .Values.spec.containerPort }}
+      
