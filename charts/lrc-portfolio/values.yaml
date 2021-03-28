@@ -18,9 +18,3 @@ service:
   type: ClusterIP
   port: 3000
   targetPort: 80
-
-# Istio/Ingress settings
-# ingress:
-#   dnsTarget: abe1d83748bb711ea83140a145ad539b-1921665207.us-east-1.elb.amazonaws.com
-#   dnsHostname: lrc-portfolio.k8s.prod.liriotech.com
-#   tlsCredName: wildcard-prod-liriotech-com

@@ -1,38 +1,16 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
-metadata:
-  name: lrc-portfolio-gateway
-  namespace: lrc-portfolio
-  annotations:
-    external-dns.alpha.kubernetes.io/target: a00d1c531b8394f0d888ee1622fcb225
-    external-dns.alpha.kubernetes.io/hostname: lrc-portfolio.dev.localhost.com
-spec:
-  selector:
-    istio: ingressgateway
-  servers:
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-    - lrc-portfolio.dev.localhost
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: lrc-portfolio-vs
-  namespace: lrc-portfolio
-spec:
-  hosts:
-  - lrc-portfolio.dev.localhost.com
-  gateways:
-  - lrc-portfolio-gateway
-  http:
-    - match:
-      - uri:
-          prefix: /
-      route:
-      - destination:
-          host: lrc-portfolio-service
-          port:
-            number: 3000
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   name: my-ingress
+#   namespace: lrc-portfolio
+#   annotations:
+#      kubernetes.io/ingress.class: nginx
+# spec:
+#   rules:
+#   - host: lrc-portfolio.35.222.52.217.xip.io
+#     http:
+#       paths:
+#       - path: /
+#         backend:
+#           serviceName: lrc-portfolio-service
+#           servicePort: 3000
