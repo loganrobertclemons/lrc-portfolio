@@ -23,7 +23,7 @@ const skills = [{
 },
 {
   title: 'Amazon Web Services',
-  competency: 3,
+  competency: 4,
   category: ['Web Development', 'Tools'],
 },
 {
@@ -58,7 +58,7 @@ const skills = [{
 },
 {
   title: 'Redis',
-  competency: 1,
+  competency: 2,
   category: ['Web Development', 'Databases'],
 },
 {
@@ -107,6 +107,11 @@ const skills = [{
   category: ['Data Science', 'Python'],
 },
 {
+  title: 'Jenkins',
+  competency: 3,
+  category: ['Tools'],
+},
+{
   title: 'Typescript',
   competency: 2,
   category: ['Web Development', 'Languages', 'Javascript'],
@@ -148,7 +153,7 @@ const skills = [{
 },
 {
   title: 'Puppet',
-  competency: 2,
+  competency: 3,
   category: ['Tools'],
 },
 {
@@ -178,13 +183,18 @@ const skills = [{
 },
 {
   title: 'Datadog',
-  competency: 2,
+  competency: 5,
   category: ['Data Engineering', 'Tools'],
 },
 {
   title: 'Go',
-  competency: 3,
+  competency: 4,
   category: ['Languages'],
+},
+{
+  title: 'Istio Service Mesh',
+  competency: 4,
+  category: ['Tools'],
 },
 {
   title: 'C#',

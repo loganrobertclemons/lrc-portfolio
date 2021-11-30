@@ -1,16 +1,16 @@
 nameOverride: lrc-portfolio
-namespace: lrc-portfolio
+namespace: apps
 serviceAccount:
   name: lrc-portfolio-reader
 
 # Deployment settings
 spec:
-  replicas: 1
+  replicas: 2
   restartPolicy: Always
   containerPort: 3000
   image:
     repository: lclemons
-    tag: lrc-portfolio:1.0.1
+    tag: portfolio-app:v2
 
 # Service settings
 service:

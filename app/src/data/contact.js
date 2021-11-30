@@ -35,7 +35,7 @@ const data = [
     icon: faAngellist,
   },
   {
-    link: 'https://twitter.com/dangelosaurus',
+    link: 'https://twitter.com/lrclemons138',
     label: 'Twitter',
     icon: faTwitter,
   },

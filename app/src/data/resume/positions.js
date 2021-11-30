@@ -1,4 +1,27 @@
 const positions = [{
+  company: 'Lirio',
+  position: 'Cloud Engineer',
+  link: 'https://lirio.com',
+  daterange: 'November 2020 - Present',
+  points: [
+    'Lead architectural design and engineered flexible and customizable Kubernetes clusters - wrote extensive terraform to complete this initiative',
+    'Separated CI and CD by automating the deployment of apps and microservices via flux',
+    'Designed, wrote, and maintained a wide array of helm charts',
+    'Lead engineer on initiative to monitor infrastructure and applications w/ Datadog',
+    'Developed custom exporters for unmonitored resources',
+    'Created slackbot for cloud engineering team, which was subsequently adopted by multiple teams across "the factory"',
+  ],
+}, {
+  company: 'Data Piper - Contracted to Google',
+  position: 'DevOps Consultant',
+  link: 'https://datapiper.com',
+  daterange: 'August 2021 - Present',
+  points: [
+    'Worked as a Google PSO on Fortune 500 enterprises',
+    'Developed Java API based on a closed-source proprietary encryption tool',
+    'Consulted on various devops related issues',
+  ],
+}, {
   company: 'DaVita Kidney Care',
   position: 'Site Reliability Engineer',
   link: 'https://davita.com',
@@ -27,6 +50,7 @@ const positions = [{
   daterange: 'June 2019 - September 2019',
   points: [
     'Groovy/python scripting',
+    'Java development',
     'Atlassian tool suite Administration',
     'Support and Administer a wide variety of Jira plugins',
   ],

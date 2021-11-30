@@ -4,17 +4,16 @@ metadata:
   name: {{ template "lrc-portfolio.name" . }}
   namespace: {{ .Values.namespace }}
   labels:
-    app: lrc-portfolio
-    sidecar.istio.io/inject: "false"
+    app: {{ template "lrc-portfolio.name" . }}
 spec:
   replicas: {{ .Values.spec.replicas }}
   selector:
     matchLabels:
-      app: lrc-portfolio
+      app: {{ template "lrc-portfolio.name" . }}
   template:
     metadata:
       labels:
-        app: lrc-portfolio
+        app: {{ template "lrc-portfolio.name" . }}
     spec:
       serviceAccountName: {{ template "lrc-portfolio.serviceAccountName" . }}
       restartPolicy: {{ .Values.spec.restartPolicy }}

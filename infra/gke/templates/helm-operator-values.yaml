@@ -1,8 +1,0 @@
-helm:
-  versions: v3
-logReleaseDiffs: true
-chartsSyncInterval: 5m
-git:
-  pollInterval: 5m
-  ssh:
-    secretName: flux-ssh

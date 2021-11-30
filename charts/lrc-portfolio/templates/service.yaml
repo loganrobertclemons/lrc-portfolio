@@ -4,12 +4,12 @@ metadata:
   name: {{ template "lrc-portfolio.name" . }}-service
   namespace: {{ .Values.namespace }}
   labels:
-    app: lrc-portfolio
+    app: {{ template "lrc-portfolio.name" . }}
 spec:
   ports:
   - name: {{ .Values.service.portName }}
     port: {{ .Values.service.port }}
     targetPort: {{ .Values.service.targetPort }}
   selector:
-    app: lrc-portfolio
+    app: {{ template "lrc-portfolio.name" . }}
   type: {{ .Values.service.type }}
